@@ -20,7 +20,6 @@ namespace Coursework
         Button[] keyboard = new Button[32];
         private void Main_Load(object sender, EventArgs e)
         {
-            this.Width = 640;
             for (int i = 0; i < 32; i++)
             {
                 keyboard[i] = new Button();
