@@ -12,14 +12,17 @@ namespace Coursework
 {
     public partial class Main : Form
     {
-        public Main()
+        string word;
+        public Main(string w)
         {
             InitializeComponent();
+            word = w;
         }
 
         Button[] keyboard = new Button[32];
         private void Main_Load(object sender, EventArgs e)
         {
+            this.Width = 640;
             for (int i = 0; i < 32; i++)
             {
                 keyboard[i] = new Button();
@@ -43,6 +46,11 @@ namespace Coursework
                 keyboard[i].Width = this.Width / 16 - 2;
                 keyboard[i].Left = keyboard[i].Width * (i % 16) + 7;
             }
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
