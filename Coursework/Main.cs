@@ -12,17 +12,19 @@ namespace Coursework
 {
     public partial class Main : Form
     {
-        string word;
+        static string word = "";
         public Main(string w)
         {
             InitializeComponent();
-            word = w;
+            word = w.ToUpper();
+            letters = new Label[word.Length];
         }
-
+        
         Button[] keyboard = new Button[32];
+        Label[] letters;
         private void Main_Load(object sender, EventArgs e)
         {
-            this.Width = 640;
+            // Создание клавиатуры
             for (int i = 0; i < 32; i++)
             {
                 keyboard[i] = new Button();
@@ -35,6 +37,19 @@ namespace Coursework
                 //"а" имеет номер 1072, "А" - 1040
                 keyboard[i].Text = Convert.ToString(Convert.ToChar(1040 + i));
                 Controls.Add(keyboard[i]);
+            }
+                        
+            for (int i = 0; i<letters.Length; i++)
+            {
+                letters[i] = new Label();
+                letters[i].Font = new Font ("Segoe UI", 25, FontStyle.Underline| FontStyle.Bold);
+                letters[i].Text = " ";
+                letters[i].AutoSize = true;
+                letters[i].Top = 200;
+                letters[i].Anchor = (AnchorStyles.Left | AnchorStyles.Bottom);
+                if (i == 0) letters[i].Left = 7;
+                else letters[i].Left = letters[i - 1].Right;
+                Controls.Add(letters[i]);
             }
         }
 
