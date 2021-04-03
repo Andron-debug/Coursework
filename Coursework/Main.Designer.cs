@@ -29,22 +29,36 @@ namespace Coursework
         /// </summary>
         private void InitializeComponent()
         {
+            this.Сhance_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // Сhance_label
+            // 
+            this.Сhance_label.AutoSize = true;
+            this.Сhance_label.Location = new System.Drawing.Point(491, 42);
+            this.Сhance_label.Name = "Сhance_label";
+            this.Сhance_label.Size = new System.Drawing.Size(50, 20);
+            this.Сhance_label.TabIndex = 0;
+            this.Сhance_label.Text = "label1";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 256);
+            this.ClientSize = new System.Drawing.Size(664, 474);
+            this.Controls.Add(this.Сhance_label);
             this.Name = "Main";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             this.Load += new System.EventHandler(this.Main_Load);
             this.SizeChanged += new System.EventHandler(this.Main_SizeChanged);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label Сhance_label;
     }
 }
 
