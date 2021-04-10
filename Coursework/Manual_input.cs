@@ -17,9 +17,28 @@ namespace Coursework
 
         private void Srtart_Click(object sender, EventArgs e)
         {
-            Form f = new Main(Word_textBox.Text);
-            f.Show();
-            this.Hide();
+            bool ok = true;
+            string word = Word_textBox.Text;
+            word = word.Trim();
+            word = word.ToUpper();
+            Word_textBox.Text = word;
+            for(int i = 0; i < word.Length; i++)
+            {
+                // Проверка на то, что все буквы - кириллица
+                if ((Convert.ToInt32(word[i]) < 1040)||(Convert.ToInt32(word[i]) > 1072))
+                {
+                    ok = false;
+                    MessageBox.Show("Содержит недопустимые символы."+"\n"+ "Используйте только кириллицу.");
+                    break;
+                }
+            }
+
+            if (ok)
+            {
+                Form f = new Main(Word_textBox.Text);
+                f.Show();
+                this.Hide();
+            }
         }
     }
 }
