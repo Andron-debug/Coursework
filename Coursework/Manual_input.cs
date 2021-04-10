@@ -33,6 +33,13 @@ namespace Coursework
                 }
             }
 
+            //Проверка на не пустую строку
+            if (word == "")
+            {
+                ok = false;
+                MessageBox.Show("Введите слово");
+            }
+
             if (ok)
             {
                 Form f = new Main(Word_textBox.Text);
