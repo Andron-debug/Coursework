@@ -17,7 +17,7 @@ namespace Coursework
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Manual_input());
+            Application.Run(new Start());
         }
     }
 }
