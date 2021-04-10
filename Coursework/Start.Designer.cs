@@ -41,6 +41,7 @@ namespace Coursework
             this.Start_PVP.TabIndex = 0;
             this.Start_PVP.Text = "PvP";
             this.Start_PVP.UseVisualStyleBackColor = true;
+            this.Start_PVP.Click += new System.EventHandler(this.Start_PVP_Click);
             // 
             // Start_PVE
             // 
@@ -59,6 +60,8 @@ namespace Coursework
             this.Controls.Add(this.Start_PVE);
             this.Controls.Add(this.Start_PVP);
             this.Name = "Start";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Start_FormClosed);
+            this.Load += new System.EventHandler(this.Start_Load);
             this.ResumeLayout(false);
 
         }
