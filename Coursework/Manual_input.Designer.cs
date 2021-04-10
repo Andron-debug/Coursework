@@ -47,7 +47,7 @@ namespace Coursework
             // Srtart
             // 
             this.Srtart.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Srtart.Location = new System.Drawing.Point(9, 125);
+            this.Srtart.Location = new System.Drawing.Point(9, 135);
             this.Srtart.Name = "Srtart";
             this.Srtart.Size = new System.Drawing.Size(341, 78);
             this.Srtart.TabIndex = 1;
