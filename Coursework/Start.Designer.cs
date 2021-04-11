@@ -71,6 +71,7 @@ namespace Coursework
             this.MaximumSize = new System.Drawing.Size(495, 285);
             this.MinimumSize = new System.Drawing.Size(495, 285);
             this.Name = "Start";
+
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.Start_Load);
             this.ResumeLayout(false);

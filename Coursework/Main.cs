@@ -81,8 +81,21 @@ namespace Coursework
             key.Hide();
             if (mistake_flag) chance--;
             Сhance_label.Text = ("Осталось попыток:" + "\n" + chance);
-            if (chance == 0) MessageBox.Show("Поражение :("+"\n"+"Правельный ответ: " + word);
-            if (filled == letters.Length) MessageBox.Show("Победа :)");
+            if (chance == 0)
+            {
+                MessageBox.Show("Поражение :(" + "\n" + "Правельный ответ: " + word);
+                Form f = new Start();
+                f.Show();
+                this.Hide();
+            }
+            if (filled == letters.Length)
+            {
+                MessageBox.Show("Победа :)");
+                Form f = new Start();
+                f.Show();
+                this.Hide();
+            }
+
         }
         private void Main_SizeChanged(object sender, EventArgs e)
         {
