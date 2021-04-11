@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Coursework
 {
@@ -22,11 +23,12 @@ namespace Coursework
             letters = new Label[word.Length];
             chance = (word.Length / 4 + 1)*4;
             Сhance_label.Text = ("Осталось попыток:"+"\n"+chance);
-All_pictureBox_invisible();
+            All_pictureBox_invisible();
         }
 
         Button[] keyboard = new Button[32];
         Label[] letters;
+        SoundPlayer pancil1 = new SoundPlayer("pencil-write-on-sound.wav");
         int chance;// Осталось попыток
         private void All_pictureBox_invisible()
         {
@@ -73,37 +75,45 @@ All_pictureBox_invisible();
         {
             Button key = (Button)sender;
             bool mistake_flag = true;
-
+            
+            // Поиск буквы
             for (int i = 0; i < word.Length; i++)
             {
                 if (key.Text == Convert.ToString(word[i]))
                 {
                     mistake_flag = false;
+                    pancil1.Play();
                     letters[i].Text = key.Text;
                     filled++;
                 }
             }
             key.Hide();
+
+            // Если ошибка
             if (mistake_flag)
             {
                 if (chance == (word.Length / 4 + 1) *3)
                 {
                     All_pictureBox_invisible();
+                    pancil1.Play();
                     pictureBox1.Visible = true;
                 }
                 if (chance == (word.Length / 4 + 1) * 2)
                 {
                     All_pictureBox_invisible();
+                    pancil1.Play();
                     pictureBox2.Visible = true;
                 }
                 if (chance == (word.Length / 4 + 1))
                 {
                     All_pictureBox_invisible();
+                    pancil1.Play();
                     pictureBox3.Visible = true;
                 }
 
                 chance--;
             }
+
             Сhance_label.Text = ("Осталось попыток:" + "\n" + chance);
             if (chance == 0) // поражение
             {
@@ -125,6 +135,7 @@ All_pictureBox_invisible();
         }
         private void Main_SizeChanged(object sender, EventArgs e)
         {
+            // Автоматическое масштабирование клавиатуры
             this.Width -= this.Width % 16;
             for (int i = 0; i < 32; i++)
             {
