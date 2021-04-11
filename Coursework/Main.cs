@@ -22,7 +22,7 @@ namespace Coursework
             letters = new Label[word.Length];
             chance = (word.Length / 4 + 1)*4;
             Сhance_label.Text = ("Осталось попыток:"+"\n"+chance);
-            All_pictureBox_invisible();
+All_pictureBox_invisible();
         }
 
         Button[] keyboard = new Button[32];

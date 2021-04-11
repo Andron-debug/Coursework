@@ -45,6 +45,7 @@ namespace Coursework
             // 
             // Сhance_label
             // 
+            this.Сhance_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Сhance_label.AutoSize = true;
             this.Сhance_label.BackColor = System.Drawing.Color.Transparent;
             this.Сhance_label.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -68,6 +69,7 @@ namespace Coursework
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Coursework.Properties.Resources.Висилица_2;
             this.pictureBox1.Location = new System.Drawing.Point(511, 75);
@@ -78,6 +80,7 @@ namespace Coursework
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Coursework.Properties.Resources.Висилица_4;
             this.pictureBox2.Location = new System.Drawing.Point(528, 75);
@@ -88,6 +91,7 @@ namespace Coursework
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::Coursework.Properties.Resources.Висилица_6;
             this.pictureBox3.Location = new System.Drawing.Point(524, 74);
@@ -98,6 +102,7 @@ namespace Coursework
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::Coursework.Properties.Resources.Висилица_8;
             this.pictureBox4.Location = new System.Drawing.Point(521, 75);
@@ -119,8 +124,6 @@ namespace Coursework
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Сhance_label);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(682, 521);
-            this.MinimumSize = new System.Drawing.Size(682, 521);
             this.Name = "Main";
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
