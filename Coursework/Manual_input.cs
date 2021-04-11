@@ -21,7 +21,6 @@ namespace Coursework
             string word = Word_textBox.Text;
             word = word.Trim();
             word = word.ToUpper();
-            Word_textBox.Text = word;
             for(int i = 0; i < word.Length; i++)
             {
                 // Проверка на то, что все буквы - кириллица
