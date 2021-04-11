@@ -47,6 +47,7 @@ All_pictureBox_invisible();
                 else keyboard[i].Top = keyboard[0].Top+keyboard[0].Height;
                 keyboard[i].Anchor = (AnchorStyles.Bottom);
                 keyboard[i].Click += key_cliced;
+                keyboard[i].Font = new Font("CyrillicRibbon", 15, FontStyle.Bold);
                 keyboard[i].Left = keyboard[i].Width*(i%16)+7;
                 //"а" имеет номер 1072, "А" - 1040
                 keyboard[i].Text = Convert.ToString(Convert.ToChar(1040 + i));
@@ -56,10 +57,10 @@ All_pictureBox_invisible();
             for (int i = 0; i<letters.Length; i++)
             {
                 letters[i] = new Label();
-                letters[i].Font = new Font ("Segoe UI", 25, FontStyle.Underline| FontStyle.Bold);
+                letters[i].Font = new Font ("CyrillicRibbon", 29, FontStyle.Underline| FontStyle.Bold);
                 letters[i].Text = "  ";
                 letters[i].AutoSize = true;
-                letters[i].Top = 200;
+                letters[i].Top = 230;
                 letters[i].BackColor = System.Drawing.Color.Transparent;
                 letters[i].Anchor = (AnchorStyles.Left | AnchorStyles.Top);
                 if (i == 0) letters[i].Left = 7;

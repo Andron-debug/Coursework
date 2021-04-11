@@ -39,15 +39,15 @@ namespace Coursework
             this.Word_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Word_textBox.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Word_textBox.Location = new System.Drawing.Point(12, 65);
+            this.Word_textBox.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Word_textBox.Location = new System.Drawing.Point(12, 69);
             this.Word_textBox.Name = "Word_textBox";
-            this.Word_textBox.Size = new System.Drawing.Size(339, 52);
+            this.Word_textBox.Size = new System.Drawing.Size(339, 41);
             this.Word_textBox.TabIndex = 0;
             // 
             // Srtart
             // 
-            this.Srtart.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Srtart.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Srtart.Location = new System.Drawing.Point(12, 125);
             this.Srtart.Name = "Srtart";
             this.Srtart.Size = new System.Drawing.Size(339, 78);
@@ -60,10 +60,10 @@ namespace Coursework
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(4, 20);
+            this.label1.Font = new System.Drawing.Font("CyrillicRibbon", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(7, -3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 45);
+            this.label1.Size = new System.Drawing.Size(258, 68);
             this.label1.TabIndex = 2;
             this.label1.Text = "Введите слово";
             // 
