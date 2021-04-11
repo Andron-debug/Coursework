@@ -22,22 +22,19 @@ namespace Coursework
             chance = word.Length / 8 + 1;
             Сhance_label.Text = ("Осталось попыток:"+"\n"+chance);
 
-            pictureBox1.Visible = false;
-            pictureBox2.Visible = false;
-            pictureBox3.Visible = false;
-            pictureBox4.Visible = false;
-            pictureBox5.Visible = false;
-            pictureBox6.Visible = false;
-            pictureBox7.Visible = false;
-            pictureBox8.Visible = false;
+
         }
         public Main(string w, string q)
         {
             InitializeComponent();
             word = w.ToUpper();
             letters = new Label[word.Length];
-            chance = word.Length / 3 + 1;
+            chance = word.Length / 4 + 1;
             Сhance_label.Text = ("Осталось попыток:" + "\n" + chance);
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = false;
+            pictureBox4.Visible = false;
         }
         Button[] keyboard = new Button[32];
         Label[] letters;
@@ -92,14 +89,14 @@ namespace Coursework
             key.Hide();
             if (mistake_flag) chance--;
             Сhance_label.Text = ("Осталось попыток:" + "\n" + chance);
-            if (chance == 0)
+            if (chance == 0) // поражение
             {
                 MessageBox.Show("Поражение :(" + "\n" + "Правельный ответ: " + word);
                 Form f = new Start();
                 f.Show();
                 this.Hide();
             }
-            if (filled == letters.Length)
+            if (filled == letters.Length) // победа
             {
                 MessageBox.Show("Победа :)");
                 Form f = new Start();
