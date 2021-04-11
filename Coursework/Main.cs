@@ -20,7 +20,7 @@ namespace Coursework
             InitializeComponent();
             word = w.ToUpper();
             letters = new Label[word.Length];
-            chance = word.Length / 4 + 1;
+            chance = (word.Length / 4 + 1)*4;
             Сhance_label.Text = ("Осталось попыток:"+"\n"+chance);
             All_pictureBox_invisible();
         }
@@ -83,10 +83,31 @@ namespace Coursework
                 }
             }
             key.Hide();
-            if (mistake_flag) chance--;
+            if (mistake_flag)
+            {
+                if (chance == (word.Length / 4 + 1) *3)
+                {
+                    All_pictureBox_invisible();
+                    pictureBox1.Visible = true;
+                }
+                if (chance == (word.Length / 4 + 1) * 2)
+                {
+                    All_pictureBox_invisible();
+                    pictureBox2.Visible = true;
+                }
+                if (chance == (word.Length / 4 + 1))
+                {
+                    All_pictureBox_invisible();
+                    pictureBox3.Visible = true;
+                }
+
+                chance--;
+            }
             Сhance_label.Text = ("Осталось попыток:" + "\n" + chance);
             if (chance == 0) // поражение
             {
+                All_pictureBox_invisible();
+                pictureBox4.Visible = true;
                 MessageBox.Show("Поражение :(" + "\n" + "Правельный ответ: " + word);
                 Form f = new Start();
                 f.Show();
