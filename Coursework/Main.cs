@@ -21,7 +21,14 @@ namespace Coursework
             chance = word.Length / 3 + 1;
             Сhance_label.Text = ("Осталось попыток:"+"\n"+chance);
         }
-        
+        public Main(string w, string q)
+        {
+            InitializeComponent();
+            word = w.ToUpper();
+            letters = new Label[word.Length];
+            chance = word.Length / 3 + 1;
+            Сhance_label.Text = ("Осталось попыток:" + "\n" + chance);
+        }
         Button[] keyboard = new Button[32];
         Label[] letters;
         int chance;// Осталось попыток
