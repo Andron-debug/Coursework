@@ -14,31 +14,27 @@ namespace Coursework
     public partial class Main : Form
     {
         static string word = "";
+        
         public Main(string w)
         {
             InitializeComponent();
             word = w.ToUpper();
             letters = new Label[word.Length];
-            chance = word.Length / 8 + 1;
-            Сhance_label.Text = ("Осталось попыток:"+"\n"+chance);
-
-
-        }
-        public Main(string w, string q)
-        {
-            InitializeComponent();
-            word = w.ToUpper();
-            letters = new Label[word.Length];
             chance = word.Length / 4 + 1;
-            Сhance_label.Text = ("Осталось попыток:" + "\n" + chance);
+            Сhance_label.Text = ("Осталось попыток:"+"\n"+chance);
+            All_pictureBox_invisible();
+        }
+
+        Button[] keyboard = new Button[32];
+        Label[] letters;
+        int chance;// Осталось попыток
+        private void All_pictureBox_invisible()
+        {
             pictureBox1.Visible = false;
             pictureBox2.Visible = false;
             pictureBox3.Visible = false;
             pictureBox4.Visible = false;
         }
-        Button[] keyboard = new Button[32];
-        Label[] letters;
-        int chance;// Осталось попыток
         private void Main_Load(object sender, EventArgs e)
         {
             // Создание клавиатуры
