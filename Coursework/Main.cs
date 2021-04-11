@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Coursework
 {
+
     public partial class Main : Form
     {
         static string word = "";
@@ -18,8 +19,17 @@ namespace Coursework
             InitializeComponent();
             word = w.ToUpper();
             letters = new Label[word.Length];
-            chance = word.Length / 3 + 1;
+            chance = word.Length / 8 + 1;
             Сhance_label.Text = ("Осталось попыток:"+"\n"+chance);
+
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = false;
+            pictureBox4.Visible = false;
+            pictureBox5.Visible = false;
+            pictureBox6.Visible = false;
+            pictureBox7.Visible = false;
+            pictureBox8.Visible = false;
         }
         public Main(string w, string q)
         {
