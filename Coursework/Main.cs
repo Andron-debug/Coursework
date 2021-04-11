@@ -49,7 +49,7 @@ namespace Coursework
                 keyboard[i].Text = Convert.ToString(Convert.ToChar(1040 + i));
                 Controls.Add(keyboard[i]);
             }
-                        
+           // Инициализация букв            
             for (int i = 0; i<letters.Length; i++)
             {
                 letters[i] = new Label();
@@ -57,6 +57,7 @@ namespace Coursework
                 letters[i].Text = "  ";
                 letters[i].AutoSize = true;
                 letters[i].Top = 200;
+                letters[i].BackColor = System.Drawing.Color.Transparent;
                 letters[i].Anchor = (AnchorStyles.Left | AnchorStyles.Top);
                 if (i == 0) letters[i].Left = 7;
                 else letters[i].Left = letters[i - 1].Right+8;
