@@ -22,14 +22,21 @@ namespace Coursework
             this.Hide();
         }
 
+
         private void Start_Load(object sender, EventArgs e)
         {
 
         }
 
+
         private void Start_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+
+        private void Start_PVP_Click(object sender, EventArgs e)
+        {
+
+
         }
     }
 }
