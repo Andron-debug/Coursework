@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-
+using System.IO;
 namespace Coursework
 {
     public partial class Start : Form
@@ -33,5 +28,16 @@ namespace Coursework
         {
             Application.Exit();
         }
+
+        private void Start_PVE_Click(object sender, EventArgs e)
+        {
+            //Слоаврь взят с http://blog.kislenko.net/show.php?id=1678
+            Random r = new Random();
+            string[] dict = File.ReadAllLines("Dict.txt");
+            Form f = new Main(dict[r.Next(0, dict.Length)]);
+            f.Show();
+            this.Hide();
+        }
     }
 }
+ 
