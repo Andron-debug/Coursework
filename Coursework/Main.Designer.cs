@@ -37,10 +37,12 @@ namespace Coursework
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.surreder = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.surreder)).BeginInit();
             this.SuspendLayout();
             // 
             // Сhance_label
@@ -111,6 +113,18 @@ namespace Coursework
             this.pictureBox4.TabIndex = 14;
             this.pictureBox4.TabStop = false;
             // 
+            // surreder
+            // 
+            this.surreder.BackColor = System.Drawing.Color.Transparent;
+            this.surreder.Image = global::Coursework.Properties.Resources._1200px_White_flag_waving_svg;
+            this.surreder.Location = new System.Drawing.Point(7, 12);
+            this.surreder.Name = "surreder";
+            this.surreder.Size = new System.Drawing.Size(66, 54);
+            this.surreder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.surreder.TabIndex = 15;
+            this.surreder.TabStop = false;
+            this.surreder.Click += new System.EventHandler(this.surreder_Click);
+            // 
             // Main
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
@@ -118,6 +132,7 @@ namespace Coursework
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Coursework.Properties.Resources.Background;
             this.ClientSize = new System.Drawing.Size(664, 474);
+            this.Controls.Add(this.surreder);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -136,6 +151,7 @@ namespace Coursework
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.surreder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,6 +166,7 @@ namespace Coursework
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox surreder;
     }
 }
 

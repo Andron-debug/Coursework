@@ -143,5 +143,15 @@ namespace Coursework
         {
             Application.Exit();
         }
+
+        private void surreder_Click(object sender, EventArgs e)
+        {
+            All_pictureBox_invisible();
+            pictureBox4.Visible = true;
+            MessageBox.Show("Поражение :(" + "\n" + "Правельный ответ: " + word);
+            Form f = new Start();
+            f.Show();
+            this.Hide();
+        }
     }
 }
