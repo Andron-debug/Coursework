@@ -57,7 +57,7 @@ namespace Coursework
                 letters[i].Font = new Font("CyrillicRibbon", 29, FontStyle.Underline | FontStyle.Bold);
                 letters[i].Text = "  ";
                 letters[i].AutoSize = true;
-                letters[i].Top = 230;
+                letters[i].Top = 250;
                 letters[i].BackColor = System.Drawing.Color.Transparent;
                 letters[i].Anchor = (AnchorStyles.Left | AnchorStyles.Top);
                 if (i == 0) letters[i].Left = 7;
@@ -139,10 +139,6 @@ namespace Coursework
             }
         }
 
-        private void Main_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void surreder_Click(object sender, EventArgs e)
         {
@@ -152,6 +148,11 @@ namespace Coursework
             Form f = new Start();
             f.Show();
             this.Hide();
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

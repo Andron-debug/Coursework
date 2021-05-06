@@ -81,6 +81,7 @@ namespace Coursework
             this.MinimumSize = new System.Drawing.Size(381, 262);
             this.Name = "Manual_input";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.Manual_input_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
