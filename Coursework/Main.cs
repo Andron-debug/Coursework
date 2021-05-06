@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Media;
+using System.Windows.Forms;
 
 namespace Coursework
 {
@@ -15,21 +9,22 @@ namespace Coursework
     public partial class Main : Form
     {
         static string word = "";
-        
+        Button[] keyboard = new Button[32];
+        Label[] letters;
+        SoundPlayer pancil1 = new SoundPlayer("pencil-write-on-sound.wav");
+        int chance;// Осталось попыток
+
         public Main(string w)
         {
             InitializeComponent();
             word = w.ToUpper();
             letters = new Label[word.Length];
-            chance = (word.Length / 4 + 1)*4;
-            Сhance_label.Text = ("Осталось попыток:"+"\n"+chance);
+            chance = (word.Length / 4 + 1) * 4;
+            Сhance_label.Text = ("Осталось попыток:" + "\n" + chance);
             All_pictureBox_invisible();
         }
 
-        Button[] keyboard = new Button[32];
-        Label[] letters;
-        SoundPlayer pancil1 = new SoundPlayer("pencil-write-on-sound.wav");
-        int chance;// Осталось попыток
+
         private void All_pictureBox_invisible()
         {
             pictureBox1.Visible = false;
@@ -43,30 +38,30 @@ namespace Coursework
             for (int i = 0; i < 32; i++)
             {
                 keyboard[i] = new Button();
-                keyboard[i].Width = this.Width/16-2;
+                keyboard[i].Width = this.Width / 16 - 2;
                 keyboard[i].Height = 40;
-                if (i< 16) keyboard[i].Top = 350;
-                else keyboard[i].Top = keyboard[0].Top+keyboard[0].Height;
+                if (i < 16) keyboard[i].Top = 350;
+                else keyboard[i].Top = keyboard[0].Top + keyboard[0].Height;
                 keyboard[i].Anchor = (AnchorStyles.Bottom);
                 keyboard[i].Click += key_cliced;
                 keyboard[i].Font = new Font("CyrillicRibbon", 15, FontStyle.Bold);
-                keyboard[i].Left = keyboard[i].Width*(i%16)+7;
+                keyboard[i].Left = keyboard[i].Width * (i % 16) + 7;
                 //"а" имеет номер 1072, "А" - 1040
                 keyboard[i].Text = Convert.ToString(Convert.ToChar(1040 + i));
                 Controls.Add(keyboard[i]);
             }
-           // Инициализация букв            
-            for (int i = 0; i<letters.Length; i++)
+            // Инициализация букв            
+            for (int i = 0; i < letters.Length; i++)
             {
                 letters[i] = new Label();
-                letters[i].Font = new Font ("CyrillicRibbon", 29, FontStyle.Underline| FontStyle.Bold);
+                letters[i].Font = new Font("CyrillicRibbon", 29, FontStyle.Underline | FontStyle.Bold);
                 letters[i].Text = "  ";
                 letters[i].AutoSize = true;
                 letters[i].Top = 230;
                 letters[i].BackColor = System.Drawing.Color.Transparent;
                 letters[i].Anchor = (AnchorStyles.Left | AnchorStyles.Top);
                 if (i == 0) letters[i].Left = 7;
-                else letters[i].Left = letters[i - 1].Right+8;
+                else letters[i].Left = letters[i - 1].Right + 8;
                 Controls.Add(letters[i]);
             }
         }
@@ -75,7 +70,7 @@ namespace Coursework
         {
             Button key = (Button)sender;
             bool mistake_flag = true;
-            
+
             // Поиск буквы
             for (int i = 0; i < word.Length; i++)
             {
@@ -92,7 +87,7 @@ namespace Coursework
             // Если ошибка
             if (mistake_flag)
             {
-                if (chance == (word.Length / 4 + 1) *3)
+                if (chance == (word.Length / 4 + 1) * 3)
                 {
                     All_pictureBox_invisible();
                     pancil1.Play();
