@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Media;
 using System.Windows.Forms;
 
-namespace Coursework
+namespace Coursework 
 {
 
     public partial class Main : Form
@@ -130,17 +130,6 @@ namespace Coursework
             }
 
         }
-        private void Main_SizeChanged(object sender, EventArgs e)
-        {
-            // Автоматическое масштабирование клавиатуры
-            this.Width -= this.Width % 16;
-            for (int i = 0; i < 32; i++)
-            {
-                keyboard[i].Width = this.Width / 16 - 2;
-                keyboard[i].Left = keyboard[i].Width * (i % 16) + 7;
-            }
-        }
-
 
         private void surreder_Click(object sender, EventArgs e)
         {
