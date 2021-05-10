@@ -24,19 +24,22 @@ namespace Coursework
         }
 
 
-        private void Start_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void Start_PVE_Click(object sender, EventArgs e)
         {
             //Слоаврь взят с http://blog.kislenko.net/show.php?id=1678
             Random r = new Random();
             string[] dict = File.ReadAllLines("Dict.txt");
-            Form f = new Main(dict[r.Next(0, dict.Length)]);
+            string word;
+            word = dict[r.Next(0, dict.Length)];
+            while (word.Length > 11) word = dict[r.Next(0, dict.Length)];
+            Form f = new Main(word);
             f.Show();
             this.Hide();
+        }
+
+        private void Start_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

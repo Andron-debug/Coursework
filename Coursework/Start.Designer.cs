@@ -43,7 +43,7 @@ namespace Coursework
             this.Start_PVP.Name = "Start_PVP";
             this.Start_PVP.Size = new System.Drawing.Size(396, 61);
             this.Start_PVP.TabIndex = 0;
-            this.Start_PVP.Text = "PvP";
+            this.Start_PVP.Text = "Два игрока";
             this.Start_PVP.UseVisualStyleBackColor = true;
             this.Start_PVP.Click += new System.EventHandler(this.Start_PVP_Click);
             // 
@@ -56,7 +56,7 @@ namespace Coursework
             this.Start_PVE.Name = "Start_PVE";
             this.Start_PVE.Size = new System.Drawing.Size(396, 60);
             this.Start_PVE.TabIndex = 1;
-            this.Start_PVE.Text = "PvE";
+            this.Start_PVE.Text = "Один игрок";
             this.Start_PVE.UseVisualStyleBackColor = true;
             this.Start_PVE.Click += new System.EventHandler(this.Start_PVE_Click);
             // 
@@ -73,6 +73,7 @@ namespace Coursework
             this.MinimumSize = new System.Drawing.Size(495, 285);
             this.Name = "Start";
             this.ShowIcon = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Start_FormClosing);
             this.Load += new System.EventHandler(this.Start_Load);
             this.ResumeLayout(false);
 
