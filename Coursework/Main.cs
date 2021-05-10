@@ -54,7 +54,8 @@ namespace Coursework
             for (int i = 0; i < letters.Length; i++)
             {
                 letters[i] = new Label();
-                letters[i].Font = new Font("CyrillicRibbon", 29, FontStyle.Underline | FontStyle.Bold);
+            if(word.Length<11) letters[i].Font = new Font("CyrillicRibbon", 29, FontStyle.Underline | FontStyle.Bold);
+            else letters[i].Font = new Font("CyrillicRibbon", 19, FontStyle.Underline | FontStyle.Bold);
                 letters[i].Text = "  ";
                 letters[i].AutoSize = true;
                 letters[i].Top = 230;
