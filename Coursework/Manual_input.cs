@@ -33,12 +33,6 @@ namespace Coursework
                 ok = false;
                 MessageBox.Show("Введите слово");
             }
-            //Проверка на длинну
-            if (word.Length>11)
-            {
-                ok = false;
-                MessageBox.Show("Слово дожно состоять менее чем из 11 букв");
-            }
             if (ok)
             {
                 Form f = new Main(Word_textBox.Text);

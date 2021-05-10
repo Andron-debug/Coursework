@@ -29,10 +29,7 @@ namespace Coursework
             //Слоаврь взят с http://blog.kislenko.net/show.php?id=1678
             Random r = new Random();
             string[] dict = File.ReadAllLines("Dict.txt");
-            string word;
-            word = dict[r.Next(0, dict.Length)];
-            while (word.Length > 11) word = dict[r.Next(0, dict.Length)];
-            Form f = new Main(word);
+            Form f = new Main(dict[r.Next(0, dict.Length)]);
             f.Show();
             this.Hide();
         }
