@@ -20,6 +20,7 @@ namespace Coursework
             word = w.ToUpper();
             letters = new Label[word.Length];
             chance = (word.Length / 4 + 1) * 4;
+            if (chance > 24) chance = 24;
             Сhance_label.Text = ("Осталось попыток:" + "\n" + chance);
             All_pictureBox_invisible();
         }
